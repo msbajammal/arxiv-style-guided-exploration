@@ -1,0 +1,35 @@
+% !TEX root =  paper.tex
+
+\begin{abstract}
+
+A wide range of analysis and testing techniques
+targeting modern web apps 
+rely on the automated exploration of their state space
+by firing events that mimic user interactions. However, finding out which elements are actionable in web apps is not a trivial task.
+To improve the efficacy 
+of exploring the event space of web apps,
+we propose a browser-independent,
+instrumentation-free 
+approach based on structural and visual stylistic cues.
+Our approach, implemented in a tool called \toolName, 
+ employs machine learning models,  
+trained on 700,000 web elements from 1,000 real-world websites, 
+to predict actionable elements on a webpage a priori.
+In addition, our approach uses stylistic cues
+for ranking these actionable elements
+while exploring the app.
+Our actionable predictor models achieve
+90.14\% precision and 87.76\% recall 
+when considering the click event listener,
+and on average, 
+75.42\% precision and 77.76\% recall 
+when considering
+the five most-frequent event types.
+Our evaluations show that
+\toolName can improve
+the \js code coverage achieved by a general-purpose crawler
+by up to 23\%.
+ 
+
+
+\end{abstract}

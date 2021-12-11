@@ -1,0 +1,81 @@
+% !TEX root =  paper.tex
+
+\section{Discussion}
+\label{sec:discussion}
+
+\header{Limitations}
+In this work, we considered only the top-five frequent event types in our dataset.
+There are, however, several other event types that can be attached to web elements; our technique can be employed to 
+train similar models for other event types.
+
+Another limitation is that our technique is not applicable to web apps 
+that use Canvas \html elements.
+In theory, however,
+our approach should be applicable if the web app uses Salable Vector Graphics (SVG)
+for actionables,
+since SVG also uses \css for styling.
+
+\header{Relation to existing approaches}
+The insight of our approach is that
+structural and visual stylistic properties of 
+elements can provide cues in exploring a web apps' event space, 
+without depending on a specific web browser or an instrumentation technique 
+for re-writing event listeners.
+There exist techniques 
+(e.g., \textsc{Artemis}~\cite{artzi2011framework} or \textsc{JSDep}~\cite{Sung:2016:StaticDomDependencyAnalysis})
+that analyze \js code
+to explore the event space of web apps.
+In theory, these techniques may achieve higher \js code coverage
+since they have direct access to the event model of the web app.
+However, as we discussed before, it is not always technically possible
+or desirable
+to use such techniques since they require specialized runtime environments (e.g., browser engines that are modified).
+In addition, our approach is not designed to \textit{replace}
+such techniques.
+Instead, we believe that stylistic features can be helpful in devising, 
+for example, hybrid event prioritization techniques. 
+
+We also believe that our work can enhance existing techniques
+that focus on state exploration strategies, such as \textsc{FeedEx}~\cite{MilaniFard:2013:FeedEx}, by helping them decide a priori which elements might be actionable.  
+
+
+\header{Threats to validity}
+An internal thread to the validity of our evaluation 
+is that
+executing the crawler on a subject might affect the next crawling sessions.
+This is due to the side-effects involving state storage (e.g., cookies, HTML5 local storage),
+which can change, for instance, the initial state for the next crawling session.
+In such cases, there might be large deviations 
+in the code coverage results across different runs of the crawler.
+We carefully investigated each app's state after every crawl 
+and reverted back any changes made during the previous crawl,
+to mitigate this threat.
+
+We included a real-world and complex web app for our evaluation, 
+namely Google Calendar,
+which is representative for highly-dynamic modern web apps.
+A threat in using a proprietary web app in our study is that
+its user interface design is likely to change in the future in unknown ways.
+This might make replicating the evaluations on this specific subject difficult.
+To mitigate this risk, 
+we have also included three open-source \js web apps as our subject systems.
+These web apps were used in previous studies
+related to automated web app exploration too~\cite{artzi2011framework, MilaniFard:2013:FeedEx}.
+Moreover, we have provided~\cite{experimental-data} the complete state-flow graph
+constructed by the crawler
+for all subject systems,
+which includes snapshots of the discovered DOM states
+in addition to the screenshots of each state,
+and the list of actionables and the events that the crawler examined during the crawl
+for each of the executions of the crawler.
+
+We included only four subject systems in our evaluation
+on \js code coverage.
+We believe that these systems can represent both the open source and proprietary web apps.
+Also, beside the source code of the open-source subject systems
+and the data collected during the execution of the crawler on all subject systems,
+we have made available~\cite{experimental-data} the source code of \toolName,
+and
+the data and R scripts used for training and testing the actionable prediction models,
+allowing for replicating the evaluations with more subjects.
+

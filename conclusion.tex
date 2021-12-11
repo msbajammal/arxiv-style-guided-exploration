@@ -1,0 +1,38 @@
+% !TEX root =  paper.tex
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+We showed that structural and visual stylistic cues
+can aid exploring web apps' event space through crawling.
+In particular, our machine learning models
+trained on around 700,000 web elements from 1,000 real-world websites
+can achieve a high accuracy
+in identifying actionables:
+90.14\% precision and 87.76\% recall 
+when considering the click event listener,
+and on average, 
+75.42\% precision and 77.76\% recall 
+when considering
+the five most-frequent event types.
+We also devised a technique for ranking actionables
+in a crawling session based on stylistic cues.
+We concluded that our technique can improve
+the \js code coverage achieved by a general-purpose crawler that is tailored for highly-dynamic web apps.
+
+One important direction of future work is to investigate the possibility of 
+training machine learning models
+for other event types
+which are widely used in certain web apps,
+e.g., drag and drop.
+In addition, we believe that stylistic cues
+should be taken into account for
+improving other aspects of crawling,
+e.g., 
+for devising state abstraction functions
+that incorporate changes in \css styles.
+
+
+
+
+

@@ -1,0 +1,105 @@
+% !TEX root =  paper.tex
+
+\section{Related Work}
+\label{sec:related-work}
+
+Many techniques have been proposed 
+for crawling dynamic web apps~\cite{Mirtaheri:2013:HistoryOfCrawlers}.
+\textsc{AJAXSearch} is tailored for indexing Ajax applications
+for efficient searching~\cite{Frey:2007-IndexingAjaxApps, Duda:2008:AjaxSearchTool}.
+It only considers \html attributes (e.g., \texttt{onclick}) 
+for detecting attached events. 
+In contrast, \toolName uses a machine learning model to detect any actionable element regardless of how the events listeners are attached.
+\textsc{RE-RIA}~\cite{Amalfitano:2008:ReverseEngineeringRIA} 
+collects execution traces from user sessions by manual driving of the web app,
+or through automated depth-first crawling in \textsc{CrawlRIA}~\cite{Amalfitano:2010:CrawlRIA}.
+It constructs a model from these traces. %by clustering equivalent user interfaces based on an equivalence relation.
+On the contrary, our approach does not need user sessions to drive the web app. %manual driving of the web application; it drives a general-purpose crawler to build a model of the web app.
+
+Peng et al.~\cite{Peng:2012:GraphBased} propose to use a greedy crawling strategy.
+The proposed approach assumes that 
+the events that change the state of the web application by adding or removing DOM nodes are not fired,
+which is far from realistic in modern web apps.
+Our technique focuses on exploring the event space of the web application,
+rather than providing a novel state exploration strategy.
+
+Dincturk et al.~\cite{Dincturk:2014:ModelBasedForRIA:TWEB} propose a model-based strategy for efficient crawling,
+i.e., ``to explore more states early on in the crawling'',
+based on an \textit{anticipated model} of the web application.
+This model allows to choose events that might lead to more efficient crawling.
+The anticipated model adapts to the actual behavior of the web app during the exploration.
+A model that reflects the web app's actual behavior as accurately as possible should be chosen,
+e.g., a \textit{hypercube}-like model,
+which assumes that the newly-explored states share the same events with the old ones.
+A crawling strategy with this hypercube-based model is proposed~\cite{Benjamin:2007:StrategyHypercube:Thesis, Benjamin:2011:StrategyHypercube:ICWE};
+yet the authors show that the mentioned assumption is frequently violated in real-word apps~\cite{Dincturk:2014:ModelBasedForRIA:TWEB}.
+Other proposed meta-models, e.g., the \textit{Menu model}~\cite{Choudhary:2012:MCrawler:Thesis, Choudhary:2013:MenuModel:ICWE},
+or the \textit{probabilistic model}~\cite{Dincturk:2012:StatisticalStrategy, Dincturk:2013:ModelBasedCrawlingStrategy} make different assumptions about the web apps under exploration.
+In contrast to the model-based crawling, \toolName does not need the user to provide a model of the web application for exploration.
+Plus, the implementations of the model-based crawlers require special environments to have full control on \js execution~\cite{Dincturk:2014:ModelBasedForRIA:TWEB}.
+\toolName is free from such limitations and can explore any web app, in any web browser, served from any web server.
+
+Moosavi et al.~\cite{Moosavi:2013:ComponentBasedCrawling, Moosavi:2014:ComponentBasedCrawlingICWE} propose the idea of categorizing events for effective state exploration.
+However, similar to other approaches, it only considers events attached
+via \html attributes.
+The approach incorporates \js event handler function names to identify similar events.
+\toolName predicts five types of event handlers regardless of how they are attached,
+and ranks actionable elements using stylistic cues.
+The proposed approach by Moosavi et al. also needs special environments (e.g., browser engines) to run. 
+
+\crawljax~\cite{Mesbah:2012:Crawljax}
+is the most cited crawler for modern web apps.
+Our technique extends \crawljax's event exploration strategy using stylistic cues.
+
+\textsc{FeedEx}~\cite{MilaniFard:2013:FeedEx}
+replaces the default state exploration strategy of \crawljax. 
+The strategy sorts partially-explored states using their
+\js code coverage, their event path diversity, and DOM diversity.
+\textsc{FeedEx} also ranks click events
+based on the diversity of the explored states
+observed through previous examinations of the events,
+i.e., it requires multiple examinations of the same clickable.
+In contrast, \toolName focuses on predicting and ranking actionables,
+and not on state space exploration strategy, which is the main goal of \textsc{FeedEx}.
+
+\textsc{Artemis}~\cite{artzi2011framework} is a general-purpose
+framework for building analysis techniques for dynamic \js web apps.
+In contrast to \toolName, \textsc{Artemis} 
+requires a special \js engine to execute.
+\textsc{JSDep}~\cite{Sung:2016:StaticDomDependencyAnalysis}
+improves \textsc{Artemis}
+by proposing a technique to identify DOM and event handler dependencies.
+Dallmeier et al.~\cite{dallmeier2014webmate, Dallmeier:2013:WebMate} propose a black-box
+approach, called \textsc{WebMate}, 
+for generating tests for web apps, focusing
+on testing cross-browser compatibility issues.
+\textsc{WebMate} only considers \js event listeners 
+from HTML attributes and for specific libraries (e.g., \textsc{jQuery}).
+In contrast to \textsc{WebMate} and \textsc{Artemis}, \toolName is framework- and browser-independent
+and focuses on identifying event listeners only using stylistic cues.
+
+Thummalapenta et al.~\cite{sinha:icse2013} propose a method
+for guided test generation of web apps
+by exercising ``interesting''
+behaviors.
+An interesting behavior is defined using business rules
+and business logic,
+which the authors show can be more effective
+in covering business rules compared to an undirected technique.
+Lin et al.~\cite{Lin:2017:Similarity} propose a technique for exploring the input space
+of the web app trough semantic similarity.
+We believe that our technique can complement these approaches.
+
+Borges et al.~\cite{Borges:2018:GuidingAppTestingMinedInteractionModels}
+propose a technique to learn from interaction models 
+to guide mobile app testing.
+The proposed approach is similar to ours
+in using a machine learning model
+to identify interesting elements to click on; 
+however, our approach uses a much richer set of stylistic and structural features, 
+and also provides a mechanism for
+ranking actionables 
+in web apps.
+Nevertheless,
+our approach is also applicable to hybrid mobile apps and 
+ mobile (progressive) web apps, which use \css for defining presentation semantics.

@@ -1,0 +1,61 @@
+% !TEX root =  paper.tex
+
+\usepackage{color}
+\usepackage{soul}
+\usepackage{graphicx}
+\usepackage{amsmath}
+%\usepackage{amssymb} % added - [MB]
+\usepackage{xspace}
+\usepackage{tikz}
+\usepackage{enumitem}
+\usepackage{threeparttable}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{ifthen}
+\usepackage{cleveref}
+\usepackage{subcaption}
+\usepackage{balance}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}%[section]
+
+\definecolor{color1}{rgb}{.2,.2,.2}
+\newcommand*\circled[1]{\tikz[inner sep=.15ex,baseline=-.75ex] \node[circle,draw,color=white,fill=color1] {#1};}
+%\newcommand*\circled[1]{#1}
+
+\newcommand{\header}[1]{\par\vspace{-1mm}\medskip\noindent\textbf{#1.}}
+\newcommand{\code}[1]{\texttt{\small #1}}
+\newcommand{\smcode}[1]{\texttt{\scriptsize #1}}
+
+\newboolean{showcomments}
+\setboolean{showcomments}{true}
+\ifthenelse{\boolean{showcomments}}
+{
+	\definecolor{myyellow}{RGB}{255, 228, 26}
+	\definecolor{myblue}{RGB}{50, 50, 220}
+	\newcommand{\nb}[2]{
+		{\sf
+			\fcolorbox{myyellow}{yellow}{\scriptsize\textbf{#1}}%
+			$\blacktriangleright$%
+			{\color{myblue}\fontsize{7pt}{8pt}\selectfont\textbf{#2}}%
+		}%
+	}
+}
+{
+	\newcommand{\nb}[2]{}
+}
+\newcommand{\davood}[1]{\nb{Davood}{#1}}
+\newcommand{\mohammad}[1]{\nb{Mohammad}{#1}}
+\newcommand{\ali}[1]{\nb{Ali}{#1}}
+
+\newcommand{\toolName}{\textsc{StyleX}\xspace}
+\newcommand{\js}{\textsc{JavaScript}\xspace}
+\newcommand{\html}{\textsc{HTML}\xspace}
+\newcommand{\css}{\textsc{CSS}\xspace}
+\newcommand{\crawljax}{\textsc{Crawljax}\xspace}
+
+
+\newcommand{\totalNumberOfFeatures}{68\xspace}
+\newcommand{\totalNumberOfElements}{697,605\xspace}
+\newcommand{\numberOfSubjectsRQTwo}{four\xspace}
+

@@ -1,0 +1,873 @@
+%%% -*-BibTeX-*-
+%%% Do NOT edit. File created by BibTeX with style
+%%% ACM-Reference-Format-Journals [18-Jan-2012].
+
+\begin{thebibliography}{54}
+
+%%% ====================================================================
+%%% NOTE TO THE USER: you can override these defaults by providing
+%%% customized versions of any of these macros before the \bibliography
+%%% command.  Each of them MUST provide its own final punctuation,
+%%% except for \shownote{}, \showDOI{}, and \showURL{}.  The latter two
+%%% do not use final punctuation, in order to avoid confusing it with
+%%% the Web address.
+%%%
+%%% To suppress output of a particular field, define its macro to expand
+%%% to an empty string, or better, \unskip, like this:
+%%%
+%%% \newcommand{\showDOI}[1]{\unskip}   % LaTeX syntax
+%%%
+%%% \def \showDOI #1{\unskip}           % plain TeX syntax
+%%%
+%%% ====================================================================
+
+\ifx \showCODEN    \undefined \def \showCODEN     #1{\unskip}     \fi
+\ifx \showDOI      \undefined \def \showDOI       #1{#1}\fi
+\ifx \showISBNx    \undefined \def \showISBNx     #1{\unskip}     \fi
+\ifx \showISBNxiii \undefined \def \showISBNxiii  #1{\unskip}     \fi
+\ifx \showISSN     \undefined \def \showISSN      #1{\unskip}     \fi
+\ifx \showLCCN     \undefined \def \showLCCN      #1{\unskip}     \fi
+\ifx \shownote     \undefined \def \shownote      #1{#1}          \fi
+\ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi
+\ifx \showURL      \undefined \def \showURL       {\relax}        \fi
+% The following commands are used for tagged output and should be
+% invisible to TeX
+\providecommand\bibfield[2]{#2}
+\providecommand\bibinfo[2]{#2}
+\providecommand\natexlab[1]{#1}
+\providecommand\showeprint[2][]{arXiv:#2}
+
+\bibitem[\protect\citeauthoryear{Adamsen, M{\o}ller, Karim, Sridharan, Tip, and
+  Sen}{Adamsen et~al\mbox{.}}{2017}]%
+        {Adamsen:2017}
+\bibfield{author}{\bibinfo{person}{Christoffer~Quist Adamsen},
+  \bibinfo{person}{Anders M{\o}ller}, \bibinfo{person}{Rezwana Karim},
+  \bibinfo{person}{Manu Sridharan}, \bibinfo{person}{Frank Tip}, {and}
+  \bibinfo{person}{Koushik Sen}.} \bibinfo{year}{2017}\natexlab{}.
+\newblock \showarticletitle{Repairing Event Race Errors by Controlling
+  Nondeterminism}. In \bibinfo{booktitle}{\emph{Proceedings of the
+  International Conference on Software Engineering}}
+  \emph{(\bibinfo{series}{ICSE'17})}. \bibinfo{publisher}{IEEE Press},
+  \bibinfo{pages}{289--299}.
+\newblock
+\showISBNx{978-1-5386-3868-2}
+\urldef\tempurl%
+\url{https://doi.org/10.1109/ICSE.2017.34}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Amalfitano, Fasolino, and
+  Tramontana}{Amalfitano et~al\mbox{.}}{2008}]%
+        {Amalfitano:2008:ReverseEngineeringRIA}
+\bibfield{author}{\bibinfo{person}{D. Amalfitano}, \bibinfo{person}{A.~R.
+  Fasolino}, {and} \bibinfo{person}{P. Tramontana}.}
+  \bibinfo{year}{2008}\natexlab{}.
+\newblock \showarticletitle{Reverse Engineering Finite State Machines from Rich
+  Internet Applications}. In \bibinfo{booktitle}{\emph{2008 15th Working
+  Conference on Reverse Engineering}}. \bibinfo{pages}{69--73}.
+\newblock
+\showISSN{1095-1350}
+\urldef\tempurl%
+\url{https://doi.org/10.1109/WCRE.2008.17}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Amalfitano, Fasolino, and
+  Tramontana}{Amalfitano et~al\mbox{.}}{2010}]%
+        {Amalfitano:2010:CrawlRIA}
+\bibfield{author}{\bibinfo{person}{D. Amalfitano}, \bibinfo{person}{A.~R.
+  Fasolino}, {and} \bibinfo{person}{P. Tramontana}.}
+  \bibinfo{year}{2010}\natexlab{}.
+\newblock \showarticletitle{Rich Internet Application Testing Using Execution
+  Trace Data}. In \bibinfo{booktitle}{\emph{2010 Third International Conference
+  on Software Testing, Verification, and Validation Workshops}}.
+  \bibinfo{pages}{274--283}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1109/ICSTW.2010.34}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Andreasen, Gong, M{\o}ller, Pradel, Selakovic,
+  Sen, and Staicu}{Andreasen et~al\mbox{.}}{2017}]%
+        {Andreasen:2017:SurveyOfDynamicAnalysis}
+\bibfield{author}{\bibinfo{person}{Esben Andreasen}, \bibinfo{person}{Liang
+  Gong}, \bibinfo{person}{Anders M{\o}ller}, \bibinfo{person}{Michael Pradel},
+  \bibinfo{person}{Marija Selakovic}, \bibinfo{person}{Koushik Sen}, {and}
+  \bibinfo{person}{Cristian-Alexandru Staicu}.}
+  \bibinfo{year}{2017}\natexlab{}.
+\newblock \showarticletitle{A Survey of Dynamic Analysis and Test Generation
+  for JavaScript}.
+\newblock \bibinfo{journal}{\emph{ACM Comput. Surv.}} \bibinfo{volume}{50},
+  \bibinfo{number}{5}, Article \bibinfo{articleno}{66} (\bibinfo{date}{Sept.}
+  \bibinfo{year}{2017}), \bibinfo{numpages}{36}~pages.
+\newblock
+\showISSN{0360-0300}
+\urldef\tempurl%
+\url{https://doi.org/10.1145/3106739}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Andrica and Candea}{Andrica and
+  Candea}{2011}]%
+        {Andrica:2011:WaRR}
+\bibfield{author}{\bibinfo{person}{S. Andrica} {and} \bibinfo{person}{G.
+  Candea}.} \bibinfo{year}{2011}\natexlab{}.
+\newblock \showarticletitle{{WaRR: A tool for high-fidelity web application
+  record and replay}}. In \bibinfo{booktitle}{\emph{2011 IEEE/IFIP 41st
+  International Conference on Dependable Systems Networks (DSN)}}.
+  \bibinfo{pages}{403--410}.
+\newblock
+\showISSN{2158-3927}
+\urldef\tempurl%
+\url{https://doi.org/10.1109/DSN.2011.5958253}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Artzi, Dolby, Jensen, M{\o}ller, and
+  Tip}{Artzi et~al\mbox{.}}{2011}]%
+        {artzi2011framework}
+\bibfield{author}{\bibinfo{person}{Shay Artzi}, \bibinfo{person}{Julian Dolby},
+  \bibinfo{person}{Simon~Holm Jensen}, \bibinfo{person}{Anders M{\o}ller},
+  {and} \bibinfo{person}{Frank Tip}.} \bibinfo{year}{2011}\natexlab{}.
+\newblock \showarticletitle{A framework for automated testing of javascript web
+  applications}. In \bibinfo{booktitle}{\emph{Proceedings of the 33rd
+  International Conference on Software Engineering}}. ACM,
+  \bibinfo{pages}{571--580}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Authors}{Authors}{2019}]%
+        {experimental-data}
+\bibfield{author}{\bibinfo{person}{Authors}.} \bibinfo{year}{2019}\natexlab{}.
+\newblock \bibinfo{title}{Tool and Experimental Data}.
+\newblock
+\newblock
+\urldef\tempurl%
+\url{omitted}
+\showURL{%
+\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Behfarshad and Mesbah}{Behfarshad and
+  Mesbah}{2013}]%
+        {Behfarshad:2013:HiddenWeb}
+\bibfield{author}{\bibinfo{person}{Zahra Behfarshad} {and} \bibinfo{person}{Ali
+  Mesbah}.} \bibinfo{year}{2013}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{Hidden-Web Induced by Client-Side
+  Scripting: An Empirical Study}}.
+\newblock \bibinfo{publisher}{Springer Berlin Heidelberg},
+  \bibinfo{address}{Berlin, Heidelberg}, \bibinfo{pages}{52--67}.
+\newblock
+\showISBNx{978-3-642-39200-9}
+\urldef\tempurl%
+\url{https://doi.org/10.1007/978-3-642-39200-9_7}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Benjamin, von Bochmann, Dincturk, Jourdan, and
+  Onut}{Benjamin et~al\mbox{.}}{2011}]%
+        {Benjamin:2011:StrategyHypercube:ICWE}
+\bibfield{author}{\bibinfo{person}{Kamara Benjamin}, \bibinfo{person}{Gregor
+  von Bochmann}, \bibinfo{person}{Mustafa~Emre Dincturk},
+  \bibinfo{person}{Guy-Vincent Jourdan}, {and} \bibinfo{person}{Iosif~Viorel
+  Onut}.} \bibinfo{year}{2011}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{A Strategy for Efficient Crawling of Rich
+  Internet Applications}}.
+\newblock \bibinfo{publisher}{Springer Berlin Heidelberg},
+  \bibinfo{address}{Berlin, Heidelberg}, \bibinfo{pages}{74--89}.
+\newblock
+\showISBNx{978-3-642-22233-7}
+\urldef\tempurl%
+\url{https://doi.org/10.1007/978-3-642-22233-7_6}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Borges, G\'{o}mez, and Zeller}{Borges
+  et~al\mbox{.}}{2018}]%
+        {Borges:2018:GuidingAppTestingMinedInteractionModels}
+\bibfield{author}{\bibinfo{person}{Nataniel~P. Borges, Jr.},
+  \bibinfo{person}{Maria G\'{o}mez}, {and} \bibinfo{person}{Andreas Zeller}.}
+  \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{Guiding App Testing with Mined Interaction Models}.
+  In \bibinfo{booktitle}{\emph{Proceedings of the 5th International Conference
+  on Mobile Software Engineering and Systems}}
+  \emph{(\bibinfo{series}{MOBILESoft '18})}. \bibinfo{publisher}{ACM},
+  \bibinfo{address}{New York, NY, USA}, \bibinfo{pages}{133--143}.
+\newblock
+\showISBNx{978-1-4503-5712-8}
+\urldef\tempurl%
+\url{https://doi.org/10.1145/3197231.3197243}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Burg, Bailey, Ko, and Ernst}{Burg
+  et~al\mbox{.}}{2013}]%
+        {Burg:2013:InteractiveRecordReply}
+\bibfield{author}{\bibinfo{person}{Brian Burg}, \bibinfo{person}{Richard
+  Bailey}, \bibinfo{person}{Andrew~J. Ko}, {and} \bibinfo{person}{Michael~D.
+  Ernst}.} \bibinfo{year}{2013}\natexlab{}.
+\newblock \showarticletitle{Interactive Record/Replay for Web Application
+  Debugging}. In \bibinfo{booktitle}{\emph{Proceedings of the 26th Annual ACM
+  Symposium on User Interface Software and Technology}}
+  \emph{(\bibinfo{series}{UIST '13})}. \bibinfo{publisher}{ACM},
+  \bibinfo{address}{New York, NY, USA}, \bibinfo{pages}{473--484}.
+\newblock
+\showISBNx{978-1-4503-2268-3}
+\urldef\tempurl%
+\url{https://doi.org/10.1145/2501988.2502050}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Choudhary}{Choudhary}{2012}]%
+        {Choudhary:2012:MCrawler:Thesis}
+\bibfield{author}{\bibinfo{person}{Suryakant Choudhary}.}
+  \bibinfo{year}{2012}\natexlab{}.
+\newblock \emph{\bibinfo{title}{{M-Crawler: Crawling Rich Internet Applications
+  Using Menu Meta-Model}}}.
+\newblock Masters' Thesis. \bibinfo{school}{University of Ottawa}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Choudhary, Dincturk, Mirtaheri, Jourdan,
+  Bochmann, and Onut}{Choudhary et~al\mbox{.}}{2013}]%
+        {Choudhary:2013:MenuModel:ICWE}
+\bibfield{author}{\bibinfo{person}{Suryakant Choudhary},
+  \bibinfo{person}{Mustafa~Emre Dincturk}, \bibinfo{person}{Seyed~M.
+  Mirtaheri}, \bibinfo{person}{Guy-Vincent Jourdan}, \bibinfo{person}{Gregor~v.
+  Bochmann}, {and} \bibinfo{person}{Iosif~Viorel Onut}.}
+  \bibinfo{year}{2013}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{Building Rich Internet Applications Models:
+  Example of a Better Strategy}}.
+\newblock \bibinfo{publisher}{Springer Berlin Heidelberg},
+  \bibinfo{address}{Berlin, Heidelberg}, \bibinfo{pages}{291--305}.
+\newblock
+\showISBNx{978-3-642-39200-9}
+\urldef\tempurl%
+\url{https://doi.org/10.1007/978-3-642-39200-9_25}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Choudhary, Prasad, and Orso}{Choudhary
+  et~al\mbox{.}}{2012}]%
+        {Choudhary:2012:CrossCheck}
+\bibfield{author}{\bibinfo{person}{S.~R. Choudhary}, \bibinfo{person}{M.~R.
+  Prasad}, {and} \bibinfo{person}{A. Orso}.} \bibinfo{year}{2012}\natexlab{}.
+\newblock \showarticletitle{CrossCheck: Combining Crawling and Differencing to
+  Better Detect Cross-browser Incompatibilities in Web Applications}. In
+  \bibinfo{booktitle}{\emph{2012 IEEE Fifth International Conference on
+  Software Testing, Verification and Validation}}. \bibinfo{pages}{171--180}.
+\newblock
+\showISSN{2159-4848}
+\urldef\tempurl%
+\url{https://doi.org/10.1109/ICST.2012.97}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Dallmeier, Burger, Orth, and Zeller}{Dallmeier
+  et~al\mbox{.}}{2013}]%
+        {Dallmeier:2013:WebMate}
+\bibfield{author}{\bibinfo{person}{Valentin Dallmeier}, \bibinfo{person}{Martin
+  Burger}, \bibinfo{person}{Tobias Orth}, {and} \bibinfo{person}{Andreas
+  Zeller}.} \bibinfo{year}{2013}\natexlab{}.
+\newblock \showarticletitle{WebMate: Generating Test Cases for Web 2.0}. In
+  \bibinfo{booktitle}{\emph{Software Quality. Increasing Value in Software and
+  Systems Development}}, \bibfield{editor}{\bibinfo{person}{Dietmar Winkler},
+  \bibinfo{person}{Stefan Biffl}, {and} \bibinfo{person}{Johannes Bergsmann}}
+  (Eds.). \bibinfo{publisher}{Springer Berlin Heidelberg},
+  \bibinfo{address}{Berlin, Heidelberg}, \bibinfo{pages}{55--69}.
+\newblock
+\showISBNx{978-3-642-35702-2}
+
+
+\bibitem[\protect\citeauthoryear{Dallmeier, Pohl, Burger, Mirold, and
+  Zeller}{Dallmeier et~al\mbox{.}}{2014}]%
+        {dallmeier2014webmate}
+\bibfield{author}{\bibinfo{person}{Valentin Dallmeier}, \bibinfo{person}{Bernd
+  Pohl}, \bibinfo{person}{Martin Burger}, \bibinfo{person}{Michael Mirold},
+  {and} \bibinfo{person}{Andreas Zeller}.} \bibinfo{year}{2014}\natexlab{}.
+\newblock \showarticletitle{WebMate: Web application test generation in the
+  real world}. In \bibinfo{booktitle}{\emph{2014 IEEE Seventh International
+  Conference on Software Testing, Verification and Validation Workshops}}.
+  IEEE, \bibinfo{pages}{413--418}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Dincturk}{Dincturk}{2013}]%
+        {Dincturk:2013:ModelBasedCrawlingStrategy}
+\bibfield{author}{\bibinfo{person}{Mustafa~Emre Dincturk}.}
+  \bibinfo{year}{2013}\natexlab{}.
+\newblock \emph{\bibinfo{title}{{Model-based Crawling - An Approach to Design
+  Efficient Crawling Strategies for Rich Internet Applications}}}.
+\newblock {PhD} Thesis. \bibinfo{school}{University of Ottawa}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Dincturk, Choudhary, von Bochmann, Jourdan,
+  and Onut}{Dincturk et~al\mbox{.}}{2012}]%
+        {Dincturk:2012:StatisticalStrategy}
+\bibfield{author}{\bibinfo{person}{Mustafa~Emre Dincturk},
+  \bibinfo{person}{Suryakant Choudhary}, \bibinfo{person}{Gregor von Bochmann},
+  \bibinfo{person}{Guy-Vincent Jourdan}, {and} \bibinfo{person}{Iosif~Viorel
+  Onut}.} \bibinfo{year}{2012}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{A Statistical Approach for Efficient
+  Crawling of Rich Internet Applications}}.
+\newblock \bibinfo{publisher}{Springer Berlin Heidelberg},
+  \bibinfo{address}{Berlin, Heidelberg}, \bibinfo{pages}{362--369}.
+\newblock
+\showISBNx{978-3-642-31753-8}
+\urldef\tempurl%
+\url{https://doi.org/10.1007/978-3-642-31753-8_29}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Dincturk, Jourdan, Bochmann, and
+  Onut}{Dincturk et~al\mbox{.}}{2014}]%
+        {Dincturk:2014:ModelBasedForRIA:TWEB}
+\bibfield{author}{\bibinfo{person}{Mustafa~Emre Dincturk},
+  \bibinfo{person}{Guy-Vincent Jourdan}, \bibinfo{person}{Gregor~V. Bochmann},
+  {and} \bibinfo{person}{Iosif~Viorel Onut}.} \bibinfo{year}{2014}\natexlab{}.
+\newblock \showarticletitle{A Model-Based Approach for Crawling Rich Internet
+  Applications}.
+\newblock \bibinfo{journal}{\emph{ACM Trans. Web}} \bibinfo{volume}{8},
+  \bibinfo{number}{3}, Article \bibinfo{articleno}{19} (\bibinfo{date}{July}
+  \bibinfo{year}{2014}), \bibinfo{numpages}{39}~pages.
+\newblock
+\showISSN{1559-1131}
+\urldef\tempurl%
+\url{https://doi.org/10.1145/2626371}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Duda, Frey, Kossmann, and Zhou}{Duda
+  et~al\mbox{.}}{2008}]%
+        {Duda:2008:AjaxSearchTool}
+\bibfield{author}{\bibinfo{person}{Cristian Duda}, \bibinfo{person}{Gianni
+  Frey}, \bibinfo{person}{Donald Kossmann}, {and} \bibinfo{person}{Chong
+  Zhou}.} \bibinfo{year}{2008}\natexlab{}.
+\newblock \showarticletitle{AJAXSearch: Crawling, Indexing and Searching Web
+  2.0 Applications}.
+\newblock \bibinfo{journal}{\emph{Proc. VLDB Endow.}} \bibinfo{volume}{1},
+  \bibinfo{number}{2} (\bibinfo{date}{Aug.} \bibinfo{year}{2008}),
+  \bibinfo{pages}{1440--1443}.
+\newblock
+\showISSN{2150-8097}
+\urldef\tempurl%
+\url{https://doi.org/10.14778/1454159.1454195}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Fard and Mesbah}{Fard and Mesbah}{2013}]%
+        {MilaniFard:2013:FeedEx}
+\bibfield{author}{\bibinfo{person}{A.~M. Fard} {and} \bibinfo{person}{A.
+  Mesbah}.} \bibinfo{year}{2013}\natexlab{}.
+\newblock \showarticletitle{Feedback-directed exploration of web applications
+  to derive test models}. In \bibinfo{booktitle}{\emph{2013 IEEE 24th
+  International Symposium on Software Reliability Engineering (ISSRE)}}.
+  \bibinfo{pages}{278--287}.
+\newblock
+\showISSN{1071-9458}
+\urldef\tempurl%
+\url{https://doi.org/10.1109/ISSRE.2013.6698880}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Frey}{Frey}{2007}]%
+        {Frey:2007-IndexingAjaxApps}
+\bibfield{author}{\bibinfo{person}{Gianni Frey}.}
+  \bibinfo{year}{2007}\natexlab{}.
+\newblock \emph{\bibinfo{title}{Indexing AJAX Web Applications}}.
+\newblock Masters' Thesis. \bibinfo{school}{ETH Zurich}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Inc.}{Inc.}{2019a}]%
+        {alexa-ranking}
+\bibfield{author}{\bibinfo{person}{Amazon Inc.}}
+  \bibinfo{year}{2019}\natexlab{a}.
+\newblock \bibinfo{title}{{Alexa ranking}}.
+\newblock
+\newblock
+\urldef\tempurl%
+\url{https://www.alexa.com/}
+\showURL{%
+\tempurl}
+\newblock
+\shownote{Accessed: 5 January 2019.}
+
+
+\bibitem[\protect\citeauthoryear{Inc.}{Inc.}{2018}]%
+        {chrome-dev-tools}
+\bibfield{author}{\bibinfo{person}{Google Inc.}}
+  \bibinfo{year}{2018}\natexlab{}.
+\newblock \bibinfo{title}{{Chrome DevTools}}.
+\newblock
+\newblock
+\urldef\tempurl%
+\url{https://chromedevtools.github.io/devtools-protocol/}
+\showURL{%
+\tempurl}
+\newblock
+\shownote{Accessed: 24 January 2018.}
+
+
+\bibitem[\protect\citeauthoryear{Inc.}{Inc.}{2019b}]%
+        {angular-custom-elements}
+\bibfield{author}{\bibinfo{person}{Google Inc.}}
+  \bibinfo{year}{2019}\natexlab{b}.
+\newblock \bibinfo{title}{{Angular Elements Overview}}.
+\newblock
+\newblock
+\urldef\tempurl%
+\url{https://angular.io/guide/elements}
+\showURL{%
+\tempurl}
+\newblock
+\shownote{Accessed: 5 January 2019.}
+
+
+\bibitem[\protect\citeauthoryear{Kuhn and Johnson}{Kuhn and Johnson}{2013}]%
+        {kuhn2013applied}
+\bibfield{author}{\bibinfo{person}{Max Kuhn} {and} \bibinfo{person}{Kjell
+  Johnson}.} \bibinfo{year}{2013}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{Applied predictive modeling}}.
+  Vol.~\bibinfo{volume}{26}.
+\newblock \bibinfo{publisher}{Springer}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Kuhn and Quinlan}{Kuhn and Quinlan}{2018}]%
+        {c50}
+\bibfield{author}{\bibinfo{person}{Max Kuhn} {and} \bibinfo{person}{Ross
+  Quinlan}.} \bibinfo{year}{2018}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{C50: C5.0 Decision Trees and Rule-Based
+  Models}}.
+\newblock
+\urldef\tempurl%
+\url{https://CRAN.R-project.org/package=C50}
+\showURL{%
+\tempurl}
+\newblock
+\shownote{R package version 0.1.2.}
+
+
+\bibitem[\protect\citeauthoryear{{Lin}, {Wang}, and {Chu}}{{Lin}
+  et~al\mbox{.}}{2017}]%
+        {Lin:2017:Similarity}
+\bibfield{author}{\bibinfo{person}{J. {Lin}}, \bibinfo{person}{F. {Wang}},
+  {and} \bibinfo{person}{P. {Chu}}.} \bibinfo{year}{2017}\natexlab{}.
+\newblock \showarticletitle{Using Semantic Similarity in Crawling-Based Web
+  Application Testing}. In \bibinfo{booktitle}{\emph{2017 IEEE International
+  Conference on Software Testing, Verification and Validation (ICST)}}.
+  \bibinfo{pages}{138--148}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1109/ICST.2017.20}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Matter}{Matter}{2007}]%
+        {Benjamin:2007:StrategyHypercube:Thesis}
+\bibfield{author}{\bibinfo{person}{Reto Matter}.}
+  \bibinfo{year}{2007}\natexlab{}.
+\newblock \emph{\bibinfo{title}{A Strategy for Efficient Crawling of Rich
+  Internet Applications}}.
+\newblock Masters' Thesis. \bibinfo{school}{University of Ottawa}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Mesbah and Prasad}{Mesbah and Prasad}{2011}]%
+        {Mesbah:2011:CrossT}
+\bibfield{author}{\bibinfo{person}{A. Mesbah} {and} \bibinfo{person}{M.~R.
+  Prasad}.} \bibinfo{year}{2011}\natexlab{}.
+\newblock \showarticletitle{Automated cross-browser compatibility testing}. In
+  \bibinfo{booktitle}{\emph{2011 33rd International Conference on Software
+  Engineering (ICSE)}}. \bibinfo{pages}{561--570}.
+\newblock
+\showISSN{1558-1225}
+\urldef\tempurl%
+\url{https://doi.org/10.1145/1985793.1985870}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Mesbah, van Deursen, and Lenselink}{Mesbah
+  et~al\mbox{.}}{2012a}]%
+        {Mesbah:2012:Crawljax}
+\bibfield{author}{\bibinfo{person}{Ali Mesbah}, \bibinfo{person}{Arie van
+  Deursen}, {and} \bibinfo{person}{Stefan Lenselink}.}
+  \bibinfo{year}{2012}\natexlab{a}.
+\newblock \showarticletitle{Crawling Ajax-Based Web Applications Through
+  Dynamic Analysis of User Interface State Changes}.
+\newblock \bibinfo{journal}{\emph{ACM Trans. Web}} \bibinfo{volume}{6},
+  \bibinfo{number}{1}, Article \bibinfo{articleno}{3} (\bibinfo{date}{March}
+  \bibinfo{year}{2012}), \bibinfo{numpages}{30}~pages.
+\newblock
+\showISSN{1559-1131}
+\urldef\tempurl%
+\url{https://doi.org/10.1145/2109205.2109208}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Mesbah, van Deursen, and Roest}{Mesbah
+  et~al\mbox{.}}{2012b}]%
+        {Mesbah:2012:InvariantBasedTesting}
+\bibfield{author}{\bibinfo{person}{A. Mesbah}, \bibinfo{person}{A. van
+  Deursen}, {and} \bibinfo{person}{D. Roest}.}
+  \bibinfo{year}{2012}\natexlab{b}.
+\newblock \showarticletitle{Invariant-Based Automatic Testing of Modern Web
+  Applications}.
+\newblock \bibinfo{journal}{\emph{IEEE Transactions on Software Engineering}}
+  \bibinfo{volume}{38}, \bibinfo{number}{1} (\bibinfo{date}{Jan}
+  \bibinfo{year}{2012}), \bibinfo{pages}{35--53}.
+\newblock
+\showISSN{0098-5589}
+\urldef\tempurl%
+\url{https://doi.org/10.1109/TSE.2011.28}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Milani~Fard, Mirzaaghaei, and
+  Mesbah}{Milani~Fard et~al\mbox{.}}{2014}]%
+        {MilaniFard:2014:LeveragingExistingTests}
+\bibfield{author}{\bibinfo{person}{Amin Milani~Fard}, \bibinfo{person}{Mehdi
+  Mirzaaghaei}, {and} \bibinfo{person}{Ali Mesbah}.}
+  \bibinfo{year}{2014}\natexlab{}.
+\newblock \showarticletitle{Leveraging Existing Tests in Automated Test
+  Generation for Web Applications}. In \bibinfo{booktitle}{\emph{Proceedings of
+  the 29th ACM/IEEE International Conference on Automated Software
+  Engineering}} \emph{(\bibinfo{series}{ASE '14})}. \bibinfo{publisher}{ACM},
+  \bibinfo{address}{New York, NY, USA}, \bibinfo{pages}{67--78}.
+\newblock
+\showISBNx{978-1-4503-3013-8}
+\urldef\tempurl%
+\url{https://doi.org/10.1145/2642937.2642991}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Mirshokraie, Mesbah, and
+  Pattabiraman}{Mirshokraie et~al\mbox{.}}{2015}]%
+        {Mirshokrae:2015:JSFeet}
+\bibfield{author}{\bibinfo{person}{S. Mirshokraie}, \bibinfo{person}{A.
+  Mesbah}, {and} \bibinfo{person}{K. Pattabiraman}.}
+  \bibinfo{year}{2015}\natexlab{}.
+\newblock \showarticletitle{{JSEFT: Automated Javascript Unit Test
+  Generation}}. In \bibinfo{booktitle}{\emph{2015 IEEE 8th International
+  Conference on Software Testing, Verification and Validation (ICST)}}.
+  \bibinfo{pages}{1--10}.
+\newblock
+\showISSN{2159-4848}
+\urldef\tempurl%
+\url{https://doi.org/10.1109/ICST.2015.7102595}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Mirtaheri, Din\c{c}t\"{u}rk, Hooshmand,
+  Bochmann, Jourdan, and Onut}{Mirtaheri et~al\mbox{.}}{2013}]%
+        {Mirtaheri:2013:HistoryOfCrawlers}
+\bibfield{author}{\bibinfo{person}{Seyed~M. Mirtaheri},
+  \bibinfo{person}{Mustafa~Emre Din\c{c}t\"{u}rk}, \bibinfo{person}{Salman
+  Hooshmand}, \bibinfo{person}{Gregor~V. Bochmann},
+  \bibinfo{person}{Guy-Vincent Jourdan}, {and} \bibinfo{person}{Iosif~Viorel
+  Onut}.} \bibinfo{year}{2013}\natexlab{}.
+\newblock \showarticletitle{A Brief History of Web Crawlers}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the 2013 Conference of the Center
+  for Advanced Studies on Collaborative Research}}
+  \emph{(\bibinfo{series}{CASCON '13})}. \bibinfo{publisher}{IBM Corp.},
+  \bibinfo{address}{Riverton, NJ, USA}, \bibinfo{pages}{40--54}.
+\newblock
+\urldef\tempurl%
+\url{http://dl.acm.org/citation.cfm?id=2555523.2555529}
+\showURL{%
+\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Mirzaaghaei and Mesbah}{Mirzaaghaei and
+  Mesbah}{2014}]%
+        {domcovery:issta14}
+\bibfield{author}{\bibinfo{person}{Mehdi Mirzaaghaei} {and}
+  \bibinfo{person}{Ali Mesbah}.} \bibinfo{year}{2014}\natexlab{}.
+\newblock \showarticletitle{DOM-based Test Adequacy Criteria for Web
+  Applications}. In \bibinfo{booktitle}{\emph{Proceedings of the International
+  Symposium on Software Testing and Analysis (ISSTA)}}.
+  \bibinfo{publisher}{ACM}, \bibinfo{pages}{71--81}.
+\newblock
+\urldef\tempurl%
+\url{http://salt.ece.ubc.ca/publications/docs/issta14.pdf}
+\showURL{%
+\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Moosavi}{Moosavi}{2013}]%
+        {Moosavi:2013:ComponentBasedCrawling}
+\bibfield{author}{\bibinfo{person}{Ali Moosavi}.}
+  \bibinfo{year}{2013}\natexlab{}.
+\newblock \emph{\bibinfo{title}{{Component-Based Crawling of Complex Rich
+  Internet Applications}}}.
+\newblock Masters' Thesis. \bibinfo{school}{University of Ottawa}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Moosavi, Hooshmand, Baghbanzadeh, Jourdan,
+  Bochmann, and Onut}{Moosavi et~al\mbox{.}}{2014}]%
+        {Moosavi:2014:ComponentBasedCrawlingICWE}
+\bibfield{author}{\bibinfo{person}{Ali Moosavi}, \bibinfo{person}{Salman
+  Hooshmand}, \bibinfo{person}{Sara Baghbanzadeh}, \bibinfo{person}{Guy-Vincent
+  Jourdan}, \bibinfo{person}{Gregor~V. Bochmann}, {and}
+  \bibinfo{person}{Iosif~Viorel Onut}.} \bibinfo{year}{2014}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{Indexing Rich Internet Applications Using
+  Components-Based Crawling}}.
+\newblock \bibinfo{publisher}{Springer International Publishing},
+  \bibinfo{address}{Cham}, \bibinfo{pages}{200--217}.
+\newblock
+\showISBNx{978-3-319-08245-5}
+\urldef\tempurl%
+\url{https://doi.org/10.1007/978-3-319-08245-5_12}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Network}{Network}{2019a}]%
+        {event-bubble-capture}
+\bibfield{author}{\bibinfo{person}{Mozilla~Developer Network}.}
+  \bibinfo{year}{2019}\natexlab{a}.
+\newblock \bibinfo{title}{{Introduction to Events: Event bubbling and
+  capture}}.
+\newblock
+\newblock
+\urldef\tempurl%
+\url{https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events\#Event_bubbling_and_capture}
+\showURL{%
+\tempurl}
+\newblock
+\shownote{Accessed: 5 January 2019.}
+
+
+\bibitem[\protect\citeauthoryear{Network}{Network}{2019b}]%
+        {web-components}
+\bibfield{author}{\bibinfo{person}{Mozilla~Developer Network}.}
+  \bibinfo{year}{2019}\natexlab{b}.
+\newblock \bibinfo{title}{{Web Components: Using custom elements}}.
+\newblock
+\newblock
+\urldef\tempurl%
+\url{https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements}
+\showURL{%
+\tempurl}
+\newblock
+\shownote{Accessed: 5 January 2019.}
+
+
+\bibitem[\protect\citeauthoryear{Peng, He, Jiang, Li, Xu, Li, and Ren}{Peng
+  et~al\mbox{.}}{2012}]%
+        {Peng:2012:GraphBased}
+\bibfield{author}{\bibinfo{person}{Z. Peng}, \bibinfo{person}{N. He},
+  \bibinfo{person}{C. Jiang}, \bibinfo{person}{Z. Li}, \bibinfo{person}{L. Xu},
+  \bibinfo{person}{Y. Li}, {and} \bibinfo{person}{Y. Ren}.}
+  \bibinfo{year}{2012}\natexlab{}.
+\newblock \showarticletitle{Graph-Based AJAX Crawl: Mining Data from Rich
+  Internet Applications}. In \bibinfo{booktitle}{\emph{2012 International
+  Conference on Computer Science and Electronics Engineering}},
+  Vol.~\bibinfo{volume}{3}. \bibinfo{pages}{590--594}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1109/ICCSEE.2012.38}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Pixley et~al\mbox{.}}{Pixley
+  et~al\mbox{.}}{2000}]%
+        {pixley2000document}
+\bibfield{author}{\bibinfo{person}{Tom Pixley} {et~al\mbox{.}}}
+  \bibinfo{year}{2000}\natexlab{}.
+\newblock \showarticletitle{Document object model (DOM) level 2 events
+  specification}.
+\newblock \bibinfo{journal}{\emph{W3C recommendation}} (\bibinfo{year}{2000}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{{R Core Team}}{{R Core Team}}{2018}]%
+        {r}
+\bibfield{author}{\bibinfo{person}{{R Core Team}}.}
+  \bibinfo{year}{2018}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{R: A Language and Environment for
+  Statistical Computing}}.
+\newblock R Foundation for Statistical Computing, Vienna, Austria.
+\newblock
+\urldef\tempurl%
+\url{https://www.R-project.org/}
+\showURL{%
+\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Richards, Gal, Eich, and Vitek}{Richards
+  et~al\mbox{.}}{2011}]%
+        {Richards:2011:ConstructionOfJSBenchmarks}
+\bibfield{author}{\bibinfo{person}{Gregor Richards}, \bibinfo{person}{Andreas
+  Gal}, \bibinfo{person}{Brendan Eich}, {and} \bibinfo{person}{Jan Vitek}.}
+  \bibinfo{year}{2011}\natexlab{}.
+\newblock \showarticletitle{Automated Construction of JavaScript Benchmarks}.
+  In \bibinfo{booktitle}{\emph{Proceedings of the 2011 ACM International
+  Conference on Object Oriented Programming Systems Languages and
+  Applications}} \emph{(\bibinfo{series}{OOPSLA '11})}.
+  \bibinfo{publisher}{ACM}, \bibinfo{address}{New York, NY, USA},
+  \bibinfo{pages}{677--694}.
+\newblock
+\showISBNx{978-1-4503-0940-0}
+\urldef\tempurl%
+\url{https://doi.org/10.1145/2048066.2048119}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Sung, Kusano, Sinha, and Wang}{Sung
+  et~al\mbox{.}}{2016}]%
+        {Sung:2016:StaticDomDependencyAnalysis}
+\bibfield{author}{\bibinfo{person}{Chungha Sung}, \bibinfo{person}{Markus
+  Kusano}, \bibinfo{person}{Nishant Sinha}, {and} \bibinfo{person}{Chao Wang}.}
+  \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{{Static DOM Event Dependency Analysis for Testing
+  Web Applications}}. In \bibinfo{booktitle}{\emph{Proceedings of the 2016 24th
+  ACM SIGSOFT International Symposium on Foundations of Software Engineering}}
+  \emph{(\bibinfo{series}{FSE 2016})}. \bibinfo{publisher}{ACM},
+  \bibinfo{address}{New York, NY, USA}, \bibinfo{pages}{447--459}.
+\newblock
+\showISBNx{978-1-4503-4218-6}
+\urldef\tempurl%
+\url{https://doi.org/10.1145/2950290.2950292}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{{The British Broadcasting Corporation}}{{The
+  British Broadcasting Corporation}}{2014}]%
+        {bbc-actionables-usability-tips}
+\bibfield{author}{\bibinfo{person}{{The British Broadcasting Corporation}}.}
+  \bibinfo{year}{2014}\natexlab{}.
+\newblock \bibinfo{title}{Mobile Accessibility Guidelines: Actionable
+  Elements}.
+\newblock
+\newblock
+\urldef\tempurl%
+\url{https://www.bbc.co.uk/guidelines/futuremedia/accessibility/mobile/design/actionable-elements}
+\showURL{%
+\tempurl}
+\newblock
+\shownote{Accessed: 15 Feb 2019.}
+
+
+\bibitem[\protect\citeauthoryear{Thummalapenta, Lakshmi, Sinha, Sinha, and
+  Chandra}{Thummalapenta et~al\mbox{.}}{2013a}]%
+        {Thummalapenta:2013:GuidedTestGeneration}
+\bibfield{author}{\bibinfo{person}{S. Thummalapenta}, \bibinfo{person}{K.~V.
+  Lakshmi}, \bibinfo{person}{S. Sinha}, \bibinfo{person}{N. Sinha}, {and}
+  \bibinfo{person}{S. Chandra}.} \bibinfo{year}{2013}\natexlab{a}.
+\newblock \showarticletitle{Guided test generation for web applications}. In
+  \bibinfo{booktitle}{\emph{2013 35th International Conference on Software
+  Engineering (ICSE)}}. \bibinfo{pages}{162--171}.
+\newblock
+\showISSN{0270-5257}
+\urldef\tempurl%
+\url{https://doi.org/10.1109/ICSE.2013.6606562}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Thummalapenta, Lakshmi, Sinha, Sinha, and
+  Chandra}{Thummalapenta et~al\mbox{.}}{2013b}]%
+        {sinha:icse2013}
+\bibfield{author}{\bibinfo{person}{Suresh Thummalapenta},
+  \bibinfo{person}{K~Vasanta Lakshmi}, \bibinfo{person}{Saurabh Sinha},
+  \bibinfo{person}{Nishant Sinha}, {and} \bibinfo{person}{Satish Chandra}.}
+  \bibinfo{year}{2013}\natexlab{b}.
+\newblock \showarticletitle{Guided test generation for web applications}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the 2013 International Conference on
+  Software Engineering}}. IEEE Press, \bibinfo{pages}{162--171}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Urbanek}{Urbanek}{2018}]%
+        {rjava}
+\bibfield{author}{\bibinfo{person}{Simon Urbanek}.}
+  \bibinfo{year}{2018}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{rJava: Low-Level R to Java Interface}}.
+\newblock
+\urldef\tempurl%
+\url{https://CRAN.R-project.org/package=rJava}
+\showURL{%
+\tempurl}
+\newblock
+\shownote{R package version 0.9-10.}
+
+
+\bibitem[\protect\citeauthoryear{W3C}{W3C}{2016}]%
+        {css-cascade-inheritance}
+\bibfield{author}{\bibinfo{person}{W3C}.} \bibinfo{year}{2016}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{{CSS Cascading and Inheritance Level 3}}}.
+\newblock \bibinfo{type}{{T}echnical {R}eport}. \bibinfo{institution}{World
+  Wide Web Consortium}.
+\newblock
+\urldef\tempurl%
+\url{https://www.w3.org/TR/css-cascade-3/}
+\showURL{%
+\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{W3C}{W3C}{2018}]%
+        {css-specs}
+\bibfield{author}{\bibinfo{person}{W3C}.} \bibinfo{year}{2018}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{{Descriptions of all CSS specifications}}}.
+\newblock \bibinfo{type}{{T}echnical {R}eport}. \bibinfo{institution}{World
+  Wide Web Consortium}.
+\newblock
+\urldef\tempurl%
+\url{https://www.w3.org/Style/CSS/specs.en.html}
+\showURL{%
+\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{webfolder.io}{webfolder.io}{2018}]%
+        {chrome-dev-tools-java}
+\bibfield{author}{\bibinfo{person}{webfolder.io}.}
+  \bibinfo{year}{2018}\natexlab{}.
+\newblock \bibinfo{title}{{cdp4j - Chrome DevTools Protocol for Java}}.
+\newblock
+\newblock
+\urldef\tempurl%
+\url{https://github.com/webfolderio/cdp4j}
+\showURL{%
+\tempurl}
+\newblock
+\shownote{Accessed: 24 January 2018.}
+
+
+\bibitem[\protect\citeauthoryear{{World Wide Web Consortium}}{{World Wide Web
+  Consortium}}{2015}]%
+        {w3c-actionable-elements}
+\bibfield{author}{\bibinfo{person}{{World Wide Web Consortium}}.}
+  \bibinfo{year}{2015}\natexlab{}.
+\newblock \bibinfo{title}{Mobile Accessibility Guidelines: Actionable
+  Elements}.
+\newblock
+\newblock
+\urldef\tempurl%
+\url{https://www.w3.org/TR/mobile-accessibility-mapping/}
+\showURL{%
+\tempurl}
+\newblock
+\shownote{Accessed: 15 Feb 2019.}
+
+
+\bibitem[\protect\citeauthoryear{{World Wide Web Consortium}}{{World Wide Web
+  Consortium}}{2016}]%
+        {w3c-consistent-identification}
+\bibfield{author}{\bibinfo{person}{{World Wide Web Consortium}}.}
+  \bibinfo{year}{2016}\natexlab{}.
+\newblock \bibinfo{title}{Web Content Accessibility Guidelines 2.0: Consistent
+  Identification}.
+\newblock
+\newblock
+\urldef\tempurl%
+\url{https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior-consistent-functionality.html/}
+\showURL{%
+\tempurl}
+\newblock
+\shownote{Accessed: 15 Feb 2019.}
+
+
+\end{thebibliography}

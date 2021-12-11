@@ -1,0 +1,192 @@
+% !TEX root =  paper.tex
+
+\section{Introduction}
+\label{sec:introduction}
+
+Modern web apps are built across different technology stacks, 
+often using multiple programming languages, e.g., \js, \html,
+Cascading Style Sheets (\css), and server-side languages such
+as PHP or Java.
+They are primarily written in an event-driven architecture,
+in which event listeners on the webpage asynchronously
+execute and change the state of the application in response to events
+(e.g., clicks, mouse hovers)~\cite{Adamsen:2017}.
+
+To mitigate the intricacies associated with analyzing 
+web apps' sophisticated source code, 
+a wide range of web app analysis and testing techniques
+rely on \textit{automated exploration} of the
+application in a black-box manner
+~\cite{Mesbah:2012:InvariantBasedTesting, MilaniFard:2013:FeedEx,
+MilaniFard:2014:LeveragingExistingTests, Mirshokrae:2015:JSFeet,
+Duda:2008:AjaxSearchTool, Choudhary:2012:CrossCheck, Mesbah:2011:CrossT,
+Thummalapenta:2013:GuidedTestGeneration, dallmeier2014webmate}.
+In a nutshell, these techniques use a web crawler specifically designed 
+ to mimic a user interacting with 
+a web app's graphical user interface in a web browser. 
+These crawlers automatically fire events on web elements,
+fill in web forms, and monitor potential changes to the UI state 
+to reverse-engineer an abstract model 
+(e.g., a \textit{state-flow} graph~\cite{Mesbah:2012:Crawljax}) of the web app.
+This inferred model is in turn used for various analysis and testing purposes, 
+such as automated test case generation
+~\cite{Thummalapenta:2013:GuidedTestGeneration, 
+MilaniFard:2014:LeveragingExistingTests, Mirshokrae:2015:JSFeet}.
+
+To achieve a sufficient degree of
+\textit{state space coverage}~\cite{domcovery:issta14},
+a crawler needs to effectively explore the event space. 
+To that end, in each new state of the web app,
+the crawler needs to
+(1) identify web elements that can potentially trigger an event
+(e.g., elements with click or mouseover events),
+and (2) determine the order or sequence
+of which web element to exercise next.
+
+While the W3C event model standard~\cite{pixley2000document}
+allows event listeners to be added to web elements
+using the Document Object Model (DOM) API,
+it does not provide access to the set of event listeners
+already attached to a particular web element
+~\cite{Andreasen:2017:SurveyOfDynamicAnalysis, Dallmeier:2013:WebMate}.
+Hence, identifying web elements that have event listeners,
+which we refer to as \emph{actionables} in this paper,
+is not straightforward.
+
+Crawlers vary in their strategies to circumvent this challenge.
+For instance, they can be configured to click on all
+elements that are known to be ``clickable'' by default,
+such as hyperlinks (e.g., \code{<a href=``www.example.com''>})
+ and buttons, which will then yield new states.
+However, this can leave out a large number of actionables
+which do not belong to these two element types,
+and therefore can undermine the crawler's ability
+ of discovering new states.
+Indeed, research has shown that hyperlinks and buttons
+are not the only doorways to new states in web
+ apps~\cite{Behfarshad:2013:HiddenWeb},
+and that other tags such as \code{<div>} and \code{<span>}
+with event listeners are extensively used in practice.
+Alternatively, configuring a crawler to explore
+\emph{all} UI elements is also not a viable option,
+since this will increase the
+analysis and crawling time by examining
+every element on each webpage
+in search of actionables.
+Most of this analysis might be wasted
+since usually only a fraction of web elements are actionable.
+
+Furthermore, a large set of existing crawlers
+~\cite{Frey:2007-IndexingAjaxApps,
+ Duda:2008:AjaxSearchTool, Moosavi:2013:ComponentBasedCrawling,
+  Moosavi:2014:ComponentBasedCrawlingICWE}
+only consider events that are attached using \html attributes 
+(e.g., \code{onclick}, \code{onmouseover}) because such attributes
+can be retrieved and accessed anytime, enabling the crawler
+to identify which elements are actionable.
+Other approaches (e.g., \textsc{WebMate}~\cite{Dallmeier:2013:WebMate, dallmeier2014webmate})
+only consider actionables for which event listeners are
+added using specific \js frameworks
+(e.g, \textsc{jQuery} or \textsc{Prototype}).
+However, event listeners are often attached to web elements
+directly through the DOM API (e.g., \code{addEventListener()}).
+Identifying actionables which use this technique
+is more challenging as the DOM API
+does not provide a mechanism for retrieving the registered handlers.
+ 
+Common workarounds for identifying actionables are
+ to use an instrumented browser engine 
+(e.g., in \textsc{Artemis}~\cite{artzi2011framework}
+ or \textsc{WaRR}~\cite{Andrica:2011:WaRR})
+or specific browser add-ons (e.g., Chrome's 
+DevTools~\cite{chrome-dev-tools}).
+This, however, restricts the devised techniques
+to a specific web browser, which is not desirable
+in many scenarios (e.g., cross-browser 
+testing~\cite{Mesbah:2011:CrossT, Choudhary:2012:CrossCheck}). 
+This also limits such techniques to a specific browser engine's \textit{version}, which hinders keeping up 
+with the rapid evolution of modern web browsers
+to test new web platform features.
+
+Another option is to instrument the web app's \js code, 
+through a web proxy, and re-write the event listener add/remove calls.
+These web proxies are known to be hard-to-deploy~\cite{Burg:2013:InteractiveRecordReply}.
+Also, source code instrumentation
+might undesirably alter the behaviour of the web app~\cite{Richards:2011:ConstructionOfJSBenchmarks}.
+Hence, there is a need for a new approach
+of identifying actionables for effective web app state exploration.
+
+Once the set of actionables is identified,
+the order in which the actionables are explored by the crawler
+can also impact the state exploration of the web app.
+Note that this is different from choosing the next web
+app {state} to explore, from a given list of 
+already-explored states (i.e., the state exploration strategy),
+which has been studied in the
+literature~\cite{MilaniFard:2013:FeedEx,
+Benjamin:2011:StrategyHypercube:ICWE,
+Choudhary:2012:MCrawler:Thesis, Choudhary:2013:MenuModel:ICWE,
+Dincturk:2013:ModelBasedCrawlingStrategy,
+Dincturk:2012:StatisticalStrategy,
+Dincturk:2014:ModelBasedForRIA:TWEB,
+Benjamin:2007:StrategyHypercube:Thesis}.
+In contrast, the issue at hand here is concerned with
+\emph{ranking} the execution order of
+actionables on a given state.
+Existing crawlers often fire events
+in a random or top-down order~\cite{Mesbah:2012:Crawljax}.
+
+In this paper, we show that these challenges
+can be tackled in a rather novel way, namely by  
+using the stylistic information of web elements.
+In particular, we propose a technique that
+identifies actionables based on the insight that 
+a web element's \textit{structural and visual styles}
+(i.e., their DOM location and the way they look)
+can potentially indicate whether they have 
+events attached to them.
+In other words, we exploit the fact that 
+a human user can easily, simply by ``looking'' at the webpage, 
+spot which elements on the page can be clicked on.
+Indeed, styling actionables in a consistent and 
+distinguishing way is a highly-recommended usability practice~\cite{w3c-actionable-elements, bbc-actionables-usability-tips}.
+We aim to capture this behavior in a model that can 
+identify actionables based on their structural and visual styles.
+
+We also show that these structural and visual stylistic
+features can provide an effective
+event ranking strategy during crawling to achieve a higher code coverage.
+Our ranking approach essentially exploits
+the Consistent Identification usability guideline~\cite{w3c-consistent-identification}:
+elements with similar functionality should have a consistent presentation across the web app.
+By postponing the execution of actionables that look similar,
+we aim at diversifying the covered functionality.
+
+To this end, we employ machine learning on a corpus of around
+700,000 web elements collected from 1,000 websites 
+to learn whether an element with specific stylistic features has an event listener.
+We incorporate \totalNumberOfFeatures structural and visual style 
+features for elements in the trained models.
+Our approach can achieve 
+90.14\% precision and 87.76\% recall in identifying clickable elements,
+and on average, 
+75.42\% precision and 77.76\% recall in identifying actionables 
+of the five most-frequent event types.
+Moreover, we devise an algorithm
+for identifying similarly-looking elements
+and ranking them accordingly to guide the crawler.
+Our evaluations also show that our approach
+can improve the covered client-side \js code
+achieved by a crawler by up to 23\%.
+
+Our paper makes the following contributions:
+
+\begin{itemize}
+	\item We provide a novel technique that uses structural and visual stylistic features of web elements
+	to identify the ones with event listeners and rank them.
+	\item A tool, \toolName, that builds upon a general-purpose web crawler for dynamic web apps
+	to incorporate the proposed technique, which is available.
+	\item A dataset of around 700,000 web elements 
+	and their associated stylistic features as rendered in the web browser
+	and the attached event listeners to them, which might be used in, e.g., future empirical studies.
+\end{itemize}

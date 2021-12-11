@@ -1,0 +1,28 @@
+% !TEX root =  paper.tex
+
+\section{Implementation}
+\label{sec:implementation}
+
+We automated our data collection using Chrome DevTool protocol's
+open-source implementation in Java (\textsc{cdp4j}~\cite{chrome-dev-tools-java}).
+We trained the machine learning models
+using \textsc{R}~\cite{r}.
+We used the implementation of C5.0 model in R~\cite{c50}
+as the final classifier,
+as it showed the best results in our evaluation.
+
+We developed \toolName,
+a tool that extends a general-purpose crawler, namely \crawljax~\cite{Mesbah:2012:Crawljax}, 
+which is tailored for exploring highly dynamic web apps. \toolName enhances \crawljax's \textit{candidate actionables strategy}
+by incorporating the trained models
+to better identify actionables,
+and also by ranking the actionables 
+using stylistic cues
+to improve state exploration.
+
+To deploy the trained models from R to Java,
+we used rJava~\cite{rjava}, which allows communicating with the R environment from Java.
+All the developed tools, 
+collected data for training,
+evaluation results, 
+and the training/testing data are available online~\cite{experimental-data}.
